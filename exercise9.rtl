@@ -1,0 +1,13 @@
+{Zsófia Tímea Kecskeméti: 2316374 / Samu Németh: 2252449}
+{STOR RA [value]}
+SigmaR, SigmaA, IP <- RAM[SigmaA], IP, IP+1
+IPB, SigmaA, SigmaW <- RAM[SigmaA], SigmaR, RA
+RAM[SigmaA], IR, SigmaA, IP, CC <- SigmaW, IPB(Ibus), IP, IP+1, ALU.cc
+
+{long add}
+{SigmaR, SigmaA, IP <- RAM[SigmaA], IP, IP + 1}
+{RA, CC, IR, IP, SigmaA <- RA(Abus) + SigmaR(Bbus), ALU.cc, RAM[SigmaA](Ibus), IP+1, IP}
+
+{normal store}
+{IPB, SigmaA, SigmaW <- RAM[SigmaA], IR.val(Bbus), RA(Abus)}
+{RAM[SigmaA], IR, SigmaA, IP, CC <- SigmaW, IPB(Ibus), IP, IP + 1, ALU.cc}

@@ -1,0 +1,18 @@
+{Zsófia Tímea Kecskeméti: 2316374 / Samu Németh: 2252449}
+SigmaR, IP <- RAM[SigmaA], IP(Abus) - 1
+IP <- IP(Abus) + SigmaR(Bbus)
+SigmaA, IP <- IP, IP+1
+IR, SigmaA, IP <- RAM[SigmaA](Ibus), IP, IP+1
+
+{short no jump}
+{IR, SigmaA, IP <- RAM[SigmaA](Ibus), IP, IP + 1}
+
+{jump when taken}
+{SigmaA, IP <- IP(Bbus), IP(Abus)+1}
+{SigmaR <- RAM[SigmaA]}
+{IR <- SigmaR(Bbus)}
+{IP <- IP(Abus) + IR.compl(Bbus)}
+
+{long add}
+{SigmaR, SigmaA, IP <- RAM[SigmaA], IP, IP + 1}
+{RA, CC, IR, IP, SigmaA <- RA(Abus) + SigmaR(Bbus), ALU.cc, RAM[SigmaA](Ibus), IP+1, IP}
