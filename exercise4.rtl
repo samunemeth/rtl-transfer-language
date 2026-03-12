@@ -1,0 +1,8 @@
+{Zsófia Tímea Kecskeméti: 2316374 / Samu Németh: 2252449}
+{LOAD RA [value] long form}
+SigmaA, IP <- IP(Bbus), IP(Abus) + 1
+SigmaR, SigmaA <- RAM[SigmaA], IP(Bbus)
+IR, SigmaR <- SigmaR(Bbus), RAM[SigmaA]
+SigmaA <- SigmaR(Bbus)
+SigmaR, IP <- RAM[SigmaA], IP(Abus) + 1
+RA, CC <- SigmaR(Bbus), ALU.cc

@@ -1,0 +1,6 @@
+{Zsófia Tímea Kecskeméti: 2316374 / Samu Németh: 2252449}
+{ADD RA RB}
+SigmaA, IP <- IP(Bbus), IP(Abus)+1
+SigmaR <- RAM[SigmaA]
+IR <- SigmaR(Bbus)
+RA, CC <- RA(Abus) + RB(Bbus), ALU.cc

@@ -1,0 +1,3 @@
+{Zsófia Tímea Kecskeméti: 2316374 / Samu Németh: 2252449}
+{ADD RA value}
+RA, IR, SigmaA, IP, CC <- RA(Abus) + IR.val(Bbus), RAM[SigmaA](Ibus), IP, IP + 1, ALU.cc

@@ -1,0 +1,6 @@
+{Zsófia Tímea Kecskeméti: 2316374 / Samu Németh: 2252449}
+{BCC disp  (when taken)}
+SigmaA, IP <- IP(Bbus), IP(Abus)+1
+SigmaR <- RAM[SigmaA]
+IR <- SigmaR(Bbus)
+IP, CC <- IP(Abus) + IR.compl(Bbus), ALU.cc
