@@ -1,4 +1,4 @@
 {Zsófia Tímea Kecskeméti: 2316374 / Samu Németh: 2252449}
 {STOR RA [value]}
 IPB, SigmaA, SigmaW <- RAM[SigmaA], IR.val(Bbus), RA(Abus)
-RAM[SigmaA], IR, SigmaA, IP <- SigmaW, IPB(Ibus), IP, IP + 1
+RAM[SigmaA], IR, SigmaA, IP, CC <- SigmaW, IPB(Ibus), IP, IP + 1, ALU.cc

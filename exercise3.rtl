@@ -3,4 +3,4 @@
 SigmaA, IP <- IP(Bbus), IP(Abus)+1
 SigmaR <- RAM[SigmaA]
 IR <- SigmaR(Bbus)
-IP, CC <- IP(Abus) + IR.compl(Bbus), ALU.cc
+IP <- IP(Abus) + IR.compl(Bbus)
